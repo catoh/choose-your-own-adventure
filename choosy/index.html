@@ -4,12 +4,20 @@
   <meta charset='UTF-8'>
   <title>Choosy - Homepage</title>
   <link rel='stylesheet' href='/css/style.css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/scripts/jquery.js"></script>
 </head>
 
 <body>
-  <div id='home-menu'>
-    <button type="button" class='main-menu' id='new-adventure' onclick="window.location='/web/create-adventure.html'">create a new adventure</button>
-    <button type="button" class='main-menu' id='view-adventure'>view an existing story</button>
+
+  <div id='welcome-message' class='menu'>
+    Welcome to Choosy, a Choose Your Own Adventure player/creater.<br>
+    Select a story to play below, or start a new one.<br>
   </div>
+
+  <br><div id='story-list' class='menu'></div>
+
+  <br><div id='new-adventure' class='menu' onclick="window.location.href='/web/new-adventure.html'">Create a new story</div>
+
 </body>
 </html>

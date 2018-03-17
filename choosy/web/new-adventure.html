@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>New Adventure Creation</title>
+  <link rel='stylesheet' href='/css/style.css'>
+</head>
+
+<body>
+
+  <div id='adventure-creation-form'>
+    Fill out the fields below to create your new story.<br><br><br>
+
+    <form action='/cgi-bin/new-adventure.py' method='post'>
+      Adventure title:<br>
+      <input type='text' name='adventure-title'><br><br>
+
+      Adventure description:<br>
+      <textarea name='adventure-description'></textarea><br><br>
+
+      <input type='submit' value='Save Adventure'>
+    </form>
+
+  <div>
+
+</body>
+</html>
