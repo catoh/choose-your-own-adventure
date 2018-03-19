@@ -70,6 +70,9 @@ else:
 
         adventure_home_page.write(homepage)
 
+    # with open('web/adventure-list.html', 'a') as adventure_list:
+    #
+    #     adventure_list.write("<a href='web/adventures'")
 
     print("""
         <!DOCTYPE html>
