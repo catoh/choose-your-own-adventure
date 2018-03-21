@@ -50,21 +50,12 @@ else:
 
     os.makedirs(path, exist_ok=True)
 
-    homepage = """
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset='UTF-8'>
-          <title>{}</title>
-          <link rel='stylesheet' href='/css/style.css'>
-        </head>
-        <body>
-          <div>
-            {}
-          </div>
-        </body>
-        </html>
-    """.format(title, description)
+
+    with open('web/adventure-list.html', 'a') as adventure_list:
+        link = "<form action='/cgi-bin/story-displayer.py'><input type='submit' name='adventure-title' value='{}'></form>\n".format(title)
+        adventure_list.write(link)
+
+    homepage = description
 
     with open(adventure_location, 'w') as adventure_home_page:
 
@@ -79,7 +70,7 @@ else:
         <html>
         <head>
           <meta charset='UTF-8'>
-          <meta http-equiv='refresh' content='1; url=/{}'
+          <meta http-equiv='refresh' content='1; url=/index.html'
           <title>Room Creation</title>
           <link rel='stylesheet' href='/css/style.css'>
         </head>
@@ -89,4 +80,4 @@ else:
           </div>
         </body>
         </html>
-    """.format(adventure_location))
+    """)
